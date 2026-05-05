@@ -12,14 +12,19 @@ body {
     color: white;
     text-align: center;
 
-    background: radial-gradient(circle at top, #1a1a1a, #000);
+    background: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+        url("IMG_4809.jpeg") no-repeat center center;
+
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Container */
 .container {
     max-width: 420px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 60px 20px 120px; /* extra Platz unten */
 }
 
 /* Profil */
@@ -28,11 +33,6 @@ body {
     border-radius: 50%;
     margin-bottom: 15px;
     border: 2px solid #00ffcc;
-    transition: 0.3s;
-}
-
-.profile img:hover {
-    transform: scale(1.05);
 }
 
 /* Text */
@@ -45,7 +45,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* BUTTONS (schmaler + zentriert) */
+/* Buttons */
 .button {
     display: block;
     width: 80%;
@@ -57,37 +57,50 @@ h1 {
     transition: 0.25s;
 }
 
-/* TikTok */
 .tiktok {
     background: linear-gradient(90deg, #00f2ea, #ff0050);
     color: white;
 }
 
-/* Instagram */
 .instagram {
     background: linear-gradient(90deg, #feda75, #d62976, #962fbf);
     color: white;
 }
 
-/* Hover + Glow Effekt */
 .button:hover {
     transform: scale(1.06);
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
-/* Smooth Fade unten */
+/* VISITENKARTE */
+.card-section {
+    margin-top: 60px;
+}
+
+.card-section p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.card-section img {
+    width: 90%;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.1);
+}
+
+/* Smooth Fade */
 .bottom-fade {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 150px;
     pointer-events: none;
 
     background: linear-gradient(
         to bottom,
         rgba(0,0,0,0),
-        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.7),
         rgba(0,0,0,1)
     );
 }
@@ -99,8 +112,8 @@ h1 {
 <div class="container">
 
     <div class="profile">
-        <img src="IMG_4801.jpeg" alt="Profilbild" style="width:110px; border-radius:50%;">
-        <h1>@pavluscha05</h1>
+        <img src="IMG_4801.jpeg">
+        <h1>paul r</h1>
         <p class="bio">Mehr Content hier 👇🔥</p>
     </div>
 
@@ -111,6 +124,12 @@ h1 {
     <a href="https://www.instagram.com/paul26310" class="button instagram">
         📸 Instagram folgen
     </a>
+
+    <!-- VISITENKARTE -->
+    <div class="card-section">
+        <p>Diese Karte hast du wahrscheinlich bekommen 👇</p>
+        <img src="84148C11-0996-45CB-BEEF-3243EE104FA7.png">
+    </div>
 
 </div>
 
